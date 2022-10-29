@@ -16,18 +16,7 @@ function Product({ id, title, price, description, category, image }) {
   return (
     <div className="relative flex flex-col m-5 bg-white z-30 p-10">
       <p className="absolute top-2 right-2 italic text-gray-400">{category}</p>
-      <div className="h-[200px] flex">
-        <Image
-          className="mx-auto my-auto w-auto h-auto max-w-[200px] max-h-[200px]"
-          src={image}
-          height={200}
-          width={200}
-          layout="fill"
-          object-fit="contain"
-          alt=""
-        />
-      </div>
-
+      <Image src={image} height={200} width={200} objectFit="contain" />
       <h4 className="my-3">{title}</h4>
       <div className="flex">
         {Array(rating)
