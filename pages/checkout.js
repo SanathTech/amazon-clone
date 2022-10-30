@@ -11,7 +11,7 @@ function Checkout() {
   const total = useSelector(selectTotal);
   const { data: session } = useSession();
   return (
-    <div className="bg-gray-100 h-screen">
+    <div className="bg-gray-100 min-h-screen">
       <Header />
       <main className="lg:flex max-w-screen-2xl mx-auto">
         {/* Left */}
@@ -22,7 +22,7 @@ function Checkout() {
             height={250}
             objectFit="contain"
           />
-          <div className="flex flex-col p-5 space-y-10 bg-white min-h-[90%]">
+          <div className="flex flex-col p-5 space-y-10 bg-white min-h-[300px]">
             <h1 className="text-3xl border-b pb-4">
               {items.length === 0
                 ? "Your Amazon Basket is empty."
