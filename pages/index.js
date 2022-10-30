@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ProductFeed from "../components/ProductFeed";
@@ -32,5 +31,3 @@ export async function getServerSideProps(context) {
     },
   };
 }
-
-// GET >>> https://fakestoreapi.com/products
