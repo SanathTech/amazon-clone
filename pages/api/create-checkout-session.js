@@ -1,6 +1,10 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export default async (req, res) => {
+  console.log("Starting Create Checkout Session");
+  console.log("Request: ", req);
+  console.log("Response: ", res);
+
   const { items, email } = req.body;
 
   const transformedItems = items.map((item) => ({
@@ -27,8 +31,8 @@ export default async (req, res) => {
     },
     line_items: transformedItems,
     mode: "payment",
-    success_url: `${process.env.NEXTAUTH_URL}/success`,
-    cancel_url: `${process.env.NEXTAUTH_URL}/checkout`,
+    success_url: `${process.env.HOST}/success`,
+    cancel_url: `${process.env.HOST}/checkout`,
     metadata: {
       email,
       images: JSON.stringify(items.map((item) => item.image)),
