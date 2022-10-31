@@ -2,9 +2,13 @@ import React from "react";
 import Header from "../components/Header";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { emptyBasket } from "../slices/basketSlice";
 
 function Success() {
+  const dispatch = useDispatch();
   const router = useRouter();
+  dispatch(emptyBasket());
   return (
     <div className="bg-gray-100 h-screen">
       <Header />
