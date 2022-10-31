@@ -22,7 +22,7 @@ function Header() {
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0 px-5">
           <Image
             onClick={() => router.push("/")}
-            src="https://links.papareact.com/f90"
+            src="/fakeazon-logo.png"
             width={120}
             height={40}
             className="cursor-pointer"
@@ -66,7 +66,7 @@ function Header() {
           All
         </p>
         <p className="link">Prime Video</p>
-        <p className="link">Amazon Business</p>
+        <p className="link">Fakeazon Business</p>
         <p className="link">Today&apos;s Deals</p>
         <p className="hidden link lg:inline-flex">Electronics</p>
         <p className="hidden link lg:inline-flex">Food & Grocery</p>
